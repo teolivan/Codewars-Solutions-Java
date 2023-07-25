@@ -21,3 +21,13 @@ public class Kata
     return "Position of alphabet: " + String.valueOf(count);
     }
 }
+
+//Second solution
+
+public class Kata
+{
+  public static String position(char alphabet)
+  {
+    return "Position of alphabet: "+(alphabet-96);
+  }
+}

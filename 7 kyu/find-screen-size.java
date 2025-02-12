@@ -11,9 +11,10 @@ class Kata {
     public static String findScreenHeight(int width, String ratio) {
     	String[] values = ratio.split(":");
       
-      int height = (width/Integer.parseInt(values[0]))*Integer.parseInt(values[1]);
-    
-      String screenSize = Integer.toString(width) + "x" + Integer.toString(height);
+      double height = ((double)width/Integer.parseInt(values[0]))*Integer.parseInt(values[1]);
+            int roundedHeight = (int) Math.floor(height);
+
+      String screenSize = Integer.toString(width) + "x" + roundedHeight;
       return screenSize;
     }
 }
